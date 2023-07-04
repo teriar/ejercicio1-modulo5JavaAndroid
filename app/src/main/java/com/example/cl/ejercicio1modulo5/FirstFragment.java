@@ -69,7 +69,7 @@ public class FirstFragment extends Fragment {
         binding.btnIr.setOnClickListener(v ->{
             String url = binding.txtDireccion.getText().toString();
             SecondFragment secondfragment = SecondFragment.newInstance(url,"");
-            getActivity().getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerView,secondfragment,"seccond").commit();
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,secondfragment,"seccond").commit();
         });
 
         return binding.getRoot();

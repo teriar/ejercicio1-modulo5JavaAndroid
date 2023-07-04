@@ -3,6 +3,7 @@ package com.example.cl.ejercicio1modulo5;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -67,9 +68,9 @@ public class SecondFragment extends Fragment {
         binding = FragmentSecondBinding.inflate(getLayoutInflater(),container,false);
 
 
-        binding.webView.loadUrl("");
+        binding.webView.loadUrl(mParam1);
         binding.btnSalir.setOnClickListener(v -> {
-
+           System.exit(0);
         });
         return binding.getRoot();
     }
